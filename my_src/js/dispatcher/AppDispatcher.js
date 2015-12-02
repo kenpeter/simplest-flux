@@ -11,6 +11,7 @@ var AppDispatcher = Assign(new Dispatcher(), {
 });
 
 // Now working
+// See this: http://ricostacruz.com/cheatsheets/flux.html
 token = AppDispatcher.register(function (payload) {
   console.log(payload);
   return true;

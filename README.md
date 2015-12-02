@@ -1,3 +1,7 @@
+# NOTE, 
+* This is based on the original simplest flux app, git@github.com:bengrunfeld/react-flux-simple-app.git
+* Two things I had changed: 1. Need to use ReactDOM.rener, instead of React.render in 0.14 version of React. 2. Need to register callback in AppDispatcher.js, not in AppStore.js
+
 # React Flux Simple App
 
 This is the simples possible App that I can think of that implements the React framework on top of the Flux architecture.
