@@ -19,3 +19,26 @@ gulp.task('default',['browserify', 'copy']);
 gulp.task('watch', function() {
     gulp.watch('src/**/*.*', ['default']);
 });
+
+
+
+// Mine
+gulp.task("my_browserify", function(){
+  gulp.src("my_src/js/main.js")
+    .pipe(browserify({transform: 'reactify'}))
+    .pipe(concat("main.js"))
+    .pipe(gulp.dest("my_dist/js"));
+});
+
+
+gulp.task("my_copy", function(){
+  gulp.src("my_src/index.html")
+    .pipe(gulp.dest("my_dist"));
+});
+
+
+gulp.task("my_default", ["my_browserify", "my_copy"]);
+
+gulp.task("my_watch", function(){
+  gulp.watch("my_src/**/*.*", ["my_default"]);
+});
